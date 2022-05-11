@@ -3,3 +3,4 @@ drb_venv/
 __pycache__/
 *.sqlite3
 /staticfiles
+.env

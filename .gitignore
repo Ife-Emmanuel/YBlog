@@ -1,5 +1,5 @@
 .vscode
-drb_venv/
+yblog_venv/
 __pycache__/
 *.sqlite3
 /staticfiles

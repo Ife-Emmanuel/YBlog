@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/ife-emmanuel/dev-applications/yblog-project/yblog-api/yblog_venv/bin/python
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

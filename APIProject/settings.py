@@ -19,22 +19,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 from decouple import config
 SECRET_KEY = config('SECRET_KEY')
 ALLOWED_HOSTS = config('ALLOWED_HOSTS')
-DEBUG = config('DEBUG')
-
-
-#
-
-#
-# CORS_ORIGIN_ALLOW_ALL = False
-# CORS_ORIGIN_WHITELIST = [
-#     'http://localhost',
-#     'http://localhost:3000/'
-# ]
-
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 
 CORS_ORIGIN_ALLOW_ALL = False
@@ -165,11 +153,8 @@ import django_on_heroku
 django_on_heroku.settings(locals())
 
 
-
-# SECURITY WARNING: don't run with debug turned on in production!
-
-import os
-if os.environ.get('DEBUG') == 'TRUE':
-    DEBUG = True
-elif os.environ.get('DEBUG') == 'FALSE':
-    DEBUG = False
+# import os
+# if os.environ.get('DEBUG') == 'TRUE':
+#     DEBUG = True
+# elif os.environ.get('DEBUG') == 'FALSE':
+#     DEBUG = False
